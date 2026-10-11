@@ -22,17 +22,3 @@ IBM Telco Customer Churn: 7,043 customers, 20 input columns (contract, tenure, c
 
 XGBoost has slightly better ROC-AUC (both on CV and test) and trained about 5x faster during tuning. Random Forest is marginally ahead on accuracy/F1 at the default 0.5 threshold. The gap is small; this dataset is mostly explained by a few strong features (contract type, tenure, charges), so both models hit a similar ceiling.
 
-## Run
-```
-pip install -r requirements.txt
-python src/churn_model.py
-```
-Plots and metrics are written to `outputs/`.
-
-## Structure
-```
-data/telco.csv
-src/churn_model.py
-outputs/  results.csv, best_params.json, *.png
-presentation/Churn_RF_vs_XGBoost.pptx
-```
